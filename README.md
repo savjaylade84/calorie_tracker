@@ -1,18 +1,12 @@
 ## Calorie Tracker in Python
 
-<br>
-
 #### calorie tracker that is in terminal but uses <br>
 #### statistic visualisation of matplotlib and numpy
-
-<br>
 
 #### Dependency
 
 - matplotlib
 - numpy
-
-<br>
 
 #### Feature
 
