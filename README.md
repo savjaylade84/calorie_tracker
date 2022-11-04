@@ -21,4 +21,8 @@
 - edit goals
 - view foods in the list
 - save list and goals
-- retrieve the save list and goalz
+- retrieve the save list and goal
+
+#### How to run it
+
+> python calorie_tracker.py
