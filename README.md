@@ -17,6 +17,12 @@
 - save list and goals
 - retrieve the save list and goal
 
+#### Statistical Visualisation 
+
+- bar graph
+- pie graph
+- plot graph
+ 
 #### How to run it
 
 > python calorie_tracker.py
