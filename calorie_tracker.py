@@ -1,5 +1,9 @@
 from dataclasses import dataclass
 import json
+from openai import OpenAI
+import matplotlib
+matplotlib.use('TkAgg') #force to use tk library
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -52,6 +56,47 @@ def add_food() -> None:
 
 	food = Food(name,calories,protein,fat,carb)
 	today.append(food)
+
+def analyse_progress() -> None:
+    header('Artificial Intelligence Analysis')
+    calories_sum = sum(food.calories for food in today)
+    protein_sum = sum(food.protein for food in today)
+    fat_sum = sum(food.fat for food in today)
+    carbs_sum = sum(food.carbs for food in today)
+    
+    client = OpenAI(
+             base_url="https://openrouter.ai/api/v1",
+             api_key="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"
+    )
+
+    completion = client.chat.completions.create(
+             extra_headers={
+             "HTTP-Referer": "", # Optional. Site URL for ran
+             "X-Title": "", # Optional. Site title for rankin
+         },
+         extra_body={},
+         model="nvidia/llama-3.3-nemotron-super-49b-v1:free",
+         messages=[
+                 {
+                     "role": "user",
+                     "content": f'''
+                                pretend to be a fitness expert and 
+                                gave a short commentary on the following datas:
+                                * total of calories is {calories_sum}
+                                * total of protein is {protein_sum}
+                                * total of fat is {fat_sum}
+                                * total of carbohydrate is {carbs_sum}
+                                * goal of calories is {CALORIE_GOAL_LIMIT}
+                                * goal of protein is {PROTEIN_GOAL}
+                                * goal of fat is {FAT_GOAL}
+                                * goal of carbohydrate is {CARBS_GOAL}
+                                Give a best suggestion to a person
+                                based on the datas shown earlier
+                                '''
+                 }
+             ]
+    )
+    print(completion.choices[0].message.content, end="\n")
 
 def visulise_progress() -> None:
 
@@ -155,56 +200,58 @@ def get_save_list() -> None:
 
 
 def main() -> None:
-
-	border()
-	print('''
+    border()
+    print('''
 Terminal Calorie Tracker with Visualisation for Statistic Progress
 Author: John Jayson B. De Leon
 Github: savjaylade84
 Email: savjaylade84@gmail.com
-		''')
+    ''')
 
-	is_done = False
-	while not is_done:
-
-		header('Command Option')
-		print("""
+    is_done = False
+    while not is_done:
+        header('Command Option')
+        print("""
 (1) Add New Food
 (2) Visualise Progress
 (3) Edit Goals
 (4) View Food List
 (5) Save List
 (6) Set Save List
-(7) quit
-			""")
+(7) AI Analysis
+(8) Quit
+""")
 
-		choice = get_value("Enter")
+        choice = get_value("Enter")
 
-		if choice == '1':
-			add_food()
-
-		elif choice == '2':
-			visulise_progress()
-
-		elif choice == '3':
-			edit_goals()
-
-		elif choice == '4':
-			show_food_list()
-
-		elif choice == '5':
-			save_list()
-
-		elif choice == '6':
-			get_save_list()
-
-		elif choice == '7':
-			is_done = not is_done
-			header('Status: Exiting The Program')
-
-		else:
-			header('Status: Invalid Input')
+        if choice == '1':
+            add_food()
+        
+        elif choice == '2':
+            visulise_progress()
+        
+        elif choice == '3':
+            edit_goals()
+        
+        elif choice == '4':
+            show_food_list()
+        
+        elif choice == '5':
+            save_list()
+        
+        elif choice == '6':
+            get_save_list()
+        
+        elif choice == '7':
+            analyse_progress()
+        
+        elif choice == '8':
+            is_done = not is_done
+            header('Status: Exiting The Program')
+        
+        else:
+            header('Status: Invalid Input')
 
 
 if __name__ == '__main__':
-	main()
+    main()

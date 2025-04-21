@@ -1,0 +1,16 @@
+Collecting pillow
+  Using cached pillow-11.2.1.tar.gz (47.0 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pillow
+  Building wheel for pillow (pyproject.toml): started
+  Building wheel for pillow (pyproject.toml): finished with status 'done'
+  Created wheel for pillow: filename=pillow-11.2.1-cp312-cp312-linux_aarch64.whl size=1098416 sha256=a694f62c8bceea5cf4413e7130b1f2f509e197331afc5e5c493ef0501f5abc8b
+  Stored in directory: /data/data/com.termux/files/home/.cache/pip/wheels/41/d1/9f/a268f9a15799300c5f40574e58a91ba139f51d090a1307b19c
+Successfully built pillow
+Installing collected packages: pillow
+Successfully installed pillow-11.2.1

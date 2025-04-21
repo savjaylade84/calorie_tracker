@@ -7,6 +7,11 @@
 - matplotlib
 - numpy
 
+#### Artificial Intelligence Dependency
+
+- openrouter
+	- NVIDIA: Llama 3.3 Nemotron Super 49B v1
+
 #### Feature
 
 - add food in the list
@@ -15,6 +20,7 @@
 - view foods in the list
 - save list and goals
 - retrieve the save list and goal
+- ai analyse the data and give commentary
 
 #### Statistical Visualisation 
 
