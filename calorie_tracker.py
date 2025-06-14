@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 import json
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
 import matplotlib
 matplotlib.use('TkAgg') #force to use tk library
 
@@ -14,7 +16,7 @@ FAT_GOAL = 80 # in grams
 CARBS_GOAL = 300 # in grams
 
 today = []
-
+load_dotenv()
 
 @dataclass
 class Food:
@@ -66,7 +68,7 @@ def analyse_progress() -> None:
     
     client = OpenAI(
              base_url="https://openrouter.ai/api/v1",
-             api_key="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"
+             api_key= ''.join(os.getenv('TOKEN'))
     )
 
     completion = client.chat.completions.create(

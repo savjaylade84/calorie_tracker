@@ -6,6 +6,7 @@
 
 - matplotlib
 - numpy
+- tkinter
 
 #### Artificial Intelligence Dependency
 
@@ -30,4 +31,4 @@
  
 #### How to run it
 
-> python calorie_tracker.py
+> pyvenv/bin/python3 calorie_tracker.py
