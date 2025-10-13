@@ -1,19 +1,21 @@
-## Calorie Tracker in Python
+# Calorie Tracker in Python
 
-#### calorie tracker that is in terminal but uses statistic visualisation of matplotlib and numpy also ai
+## calorie tracker that is in terminal but uses statistic visualisation of matplotlib and numpy also ai
  
-#### Dependency
+## Dependency
 
 - matplotlib
 - numpy
 - tkinter
+- openai
+- dotenv
 
-#### Artificial Intelligence Dependency
+## Artificial Intelligence Dependency
 
 - openrouter
-	- NVIDIA: Llama 3.3 Nemotron Super 49B v1
+  - NVIDIA: Llama 3.3 Nemotron Super 49B v1
 
-#### Feature
+## Feature
 
 - add food in the list
 - visualise a statistic of progress
@@ -23,12 +25,12 @@
 - retrieve the save list and goal
 - ai analyse the data and give commentary
 
-#### Statistical Visualisation 
+## Statistical Visualisation
 
 - bar graph
 - pie graph
 - plot graph
- 
-#### How to run it
+
+## How to run it
 
 > pyvenv/bin/python3 calorie_tracker.py
