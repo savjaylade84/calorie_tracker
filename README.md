@@ -33,4 +33,6 @@
 
 ## How to run it
 
-> pyvenv/bin/python3 calorie_tracker.py
+`pip install -r requirements.txt`
+
+`python3 calorie_tracker.py`
