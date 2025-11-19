@@ -1,6 +1,6 @@
 # Calorie Tracker in Python
 
-## calorie tracker that is in terminal but uses statistic visualisation of matplotlib and numpy also ai
+## calorie tracker that is in terminal and uses statistic visualisation of matplotlib and numpy also it uses ai for generating advice according to the statistics data given by the user
 
 ## Dependency
 
