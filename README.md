@@ -36,3 +36,10 @@
 `pip install -r requirements.txt`
 
 `python3 calorie_tracker.py`
+
+## Contact Information <br>
+
+Author: `John Jayson B. De Leon`</br>
+Email: `deleonjohnjayson@gmail.com` | `deleonjohnjayson@proton.me` </br>
+Github: `savjaylade84`</br>
+Portolio: [Jisun](https://savjalade84.pythonanywhere.com/)
