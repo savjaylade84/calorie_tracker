@@ -10,7 +10,7 @@
 - openai
 - dotenv
 
-## Artificial Intelligence Dependency
+## Artificial Intelligence API
 
 - openrouter
   - NVIDIA: Llama 3.3 Nemotron Super 49B v1
